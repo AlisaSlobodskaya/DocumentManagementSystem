@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: YOUR_PASSWORD
+    url: YOUR_URL
+    username: YOUR_USERNAME
+  jpa:
+    hibernate:
+      naming:
+        strategy: org.hibernate.cfg.EJB3NamingStrategy
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+  main:
+    allow-circular-references: true
+    banner-mode: "off"
