@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" rel="stylesheet">
+    <title>Update user</title>
+</head>
+<body>
+<form th:action="@{/admin/users/update}" th:method="PUT" th:object="${user}">
+    <div>
+        <label for="id"> Enter id: </label>
+        <input id="id" th:field="*{id}" type="text"/>
+        <br/>
+        <label for="username"> Enter username: </label>
+        <input id="username" th:field="*{username}" type="text"/>
+        <br/>
+        <label for="email"> Enter email: </label>
+        <input id="email" th:field="*{email}" type="text"/>
+        <br/>
+        <label for="password"> Enter password: </label>
+        <input id="password" th:field="*{password}" type="password"/>
+        <br/>
+        <label for="roleId"> Enter roleId: </label>
+        <input id="roleId" th:field="*{role.getId}" type="text"/>
+        <br/>
+        <input type="submit" value="Update"/>
+    </div>
+</form>
+</body>
+</html>
